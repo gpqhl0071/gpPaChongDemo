@@ -8,7 +8,7 @@ import re
 browser = Browser('chrome')
 browser.visit('https://www.tutorialspoint.com/mongodb/mongodb_data_modeling.htm')
 
-search_results_xpath = '/html/body/div[1]/div/div[1]/ul[1]/li'  # simple, right?
+search_results_xpath = '/html/body/div[1]/div/div[1]/ul[2]/li'  # simple, right?
 
 search_results = browser.find_by_xpath(search_results_xpath)
 
@@ -22,5 +22,7 @@ for search_result in search_results:
         menuUrl = '(https://www.tutorialspoint.com/' + menuUrl.group() + ')'
         menuTitle = '['+newTitle1.group()+']'
 
-        print(menuTitle, menuUrl)
+        str = menuTitle + menuUrl
+
+        print(str)
     # print(title)
