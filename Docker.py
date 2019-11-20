@@ -19,7 +19,7 @@ for search_result in search_results:
     if menuUrl is not None:
         newTitle1 = re.search('(?<=\">)(.+?)(?=\<)', title)
 
-        menuUrl = '(https://www.tutorialspoint.com/' + menuUrl.group() + ')'
+        menuUrl = '(https://www.runoob.com/docker/' + menuUrl.group() + ')'
         menuTitle = '['+newTitle1.group()+']'
 
         str = menuTitle + menuUrl
